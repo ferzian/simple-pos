@@ -2,20 +2,22 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "postgresql"
-    directUrl = env("DIRECT_URL")
-    url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  directUrl = env("DIRECT_URL")
+  url       = env("DATABASE_URL")
 }
 
+model Category {
+  id String @id @default(uuid())
 
-model Category{
-    id String @id @default(uuid())
+  name         String
+  productCount Int    @default(0)
 
-    name String
-    productCount Int @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
 
 }
