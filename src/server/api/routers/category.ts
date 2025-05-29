@@ -23,8 +23,6 @@ export const CategoryRouter = createTRPCRouter({
           id: true,
           name: true,
           productCount: true,
-          // createdAt: true,
-          // updatedAt: true,
         },
       });
       return newCategory;
