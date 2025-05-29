@@ -21,7 +21,6 @@ export const ProductMenuCard: React.FC<ProductMenuCardProps> = ({
       minimumFractionDigits: 0,
     }).format(price);
   };
-
   return (
     <div className="hover:bg-accent/10 relative flex flex-col rounded-lg border p-4 transition-colors">
       {product.image && (
